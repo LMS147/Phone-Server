@@ -1,0 +1,18 @@
+# Credentials
+.env
+.env.*
+!.env.example
+token.txt
+**/token.txt
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.ssh/
+.cloudflared/
+# Live server files and process state
+server/
+*.log
+*.pid
+*.lock
+__pycache__/

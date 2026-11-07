@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+umask 077
+mkdir -p "$HOME/server/logs"
+nohup bash "$HOME/start.sh" >> "$HOME/server/logs/startup.log" 2>&1 < /dev/null &

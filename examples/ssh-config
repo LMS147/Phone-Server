@@ -1,0 +1,13 @@
+# Merge the appropriate block into ~/.ssh/config; do not replace existing entries.
+# Replace hostname and username. Android: run whoami on the SERVER phone.
+# Windows: find the executable using PowerShell Get-Command cloudflared.
+Host homessh
+    HostName ssh.example.com
+    User YOUR_TERMUX_USER
+    ProxyCommand "C:/PATH/TO/cloudflared.exe" access ssh --hostname %h
+
+# On a second Android phone with Termux and cloudflared installed:
+Host phone
+    HostName ssh.example.com
+    User YOUR_TERMUX_USER
+    ProxyCommand cloudflared access ssh --hostname %h
